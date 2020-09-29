@@ -1,6 +1,6 @@
 import random
 
-from model import db, Donor, Donation 
+from model import db, Donor, Donation
 
 db.connect()
 
@@ -24,3 +24,4 @@ donors = [alice, bob, charlie]
 for x in range(30):
     Donation(donor=random.choice(donors), value=random.randint(100, 10000)).save()
 
+db.close()
